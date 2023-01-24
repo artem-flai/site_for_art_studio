@@ -1,0 +1,26 @@
+{% extends 'picture/base.html' %}
+
+{% block content %}
+<div class="preview">
+    <h1 class="name__list">{{ title }}</h1>
+    <div class="content__gallery">
+        {% for f in fotos %}
+        {% if f.pk > 0 %}
+        {% for mk in mk_info %}
+        <div class="block__foto__gallery">
+            {% if mk.pk == 0 %}
+            <img class="mk__foto" src="{{ f.foto.url }}">
+            <a href="{{ f.foto.url }}">{{ f.name_picture }}
+            </a>
+            {% else %}
+            <img class="mk__foto" src="{{ f.foto.url }}">
+            <a href="{% url 'form_writer' ip_mk=mk.pk ip_pict=f.pk %}">{{ f.name_picture }}
+            </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

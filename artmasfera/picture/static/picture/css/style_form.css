@@ -1,0 +1,90 @@
+
+body {
+    padding: 0;
+    min-width: 680px;
+    margin-top: 80px;
+    background: #f5f5f5;
+    width: 100%;
+    line-height: 5px;
+    font-size: 18px;
+}
+
+/* Форма для записи на мк*/
+.form_container{
+    width: 680px;
+    margin: auto;
+}
+form {
+    margin-top: -434px;
+}
+.packet {
+    display: flex;
+    margin-left: 122px;
+}
+div p {
+    margin-bottom: 47px;
+}
+div .block__mk {
+    width: 270px;
+}
+div .info__mk {
+    width: 220px;
+}
+div .info__mk p{
+    margin: 13px 0 32px 4px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    font-size: 26px;
+}
+.info__1 {
+    color: #74D379;
+    font-size: 18px;
+}
+.info__2 {
+    color: #E9DF49;
+    font-size: 18px;
+}
+.info__3 {
+    color: #CF9F55;
+    font-size: 18px;
+}
+.info__4 {
+    color: #15A5E2;
+    font-size: 18px;
+}
+.info__5 {
+    color: #E34633;
+    font-size: 18px;
+}
+.info__mk p{
+    border-bottom-style: solid;
+    border-width: 5px;
+}
+input[type="text"], input[type="tel"] {
+    width: 180px;
+    height: 24px;
+    margin: -7px 0 17px 8px;
+}
+input[type="text"] {
+    border: 5px solid #e9e9e7;
+    border-radius: 10px;
+}
+input[type="tel"] {
+    border: 5px solid #f8b667;
+    border-radius: 10px;
+}
+input[type="submit"] {
+    width: 290px;
+    height: 48px;
+    margin: 16px 0 0 200px;
+    font-size: 20px;
+    color: #e69419;
+    background-color: #ffecae;
+    border: none;
+    border-radius: 10px;
+
+}
+input[type="submit"]:hover{
+    border: 5px solid #f8b667;
+    border-radius: 10px;
+}

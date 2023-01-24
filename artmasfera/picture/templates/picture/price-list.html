@@ -1,0 +1,42 @@
+{% extends 'picture/base.html' %}
+
+{% block content %}
+<div class="preview">
+	<h1 class="name__list">{{ title }}</h1>
+	<div class="content__price_list">
+
+		<ul>
+			{% for pr in price %}
+			{% if pr.холст == "20х30 акрил" or pr.холст == "А4 мороженое" %}
+			<li>
+				<div class="price_view">
+					<p>Холст: {{pr.холст}}</p>
+				</div>
+				<ul>
+					<p>Стоимость: {{pr.цена}}</p>
+					<p>Детский арт</p>
+				</ul>
+			</li>
+			{% else %}
+			<li>
+				<div class="price_view">
+					<p>Холст: {{pr.холст}}</p>
+				</div>
+				<ul>
+					<p>Стоимость: {{pr.цена}}</p>
+				</ul>
+			</li>
+			{% endif %}
+			{% endfor %}
+			<li>
+				<ul>
+					<p>Продолжительность: 2-3 часа</p>
+					<p>Корпоративная цена от 10 человек</p>
+					<p>Бесплатно в пределах МКАД</p>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+</div>
+{% endblock %}

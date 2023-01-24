@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<link type="text/css" href="{% static 'picture/css/styles.css' %}" rel="stylesheet" />
+	<link rel="shortcut icon" href="{% static 'picture/images/main.ico' %}" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Play&family=Rampart+One+Comfortaa:wght@100&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<body>
+		<div class="intro">
+			<div class="container">
+				<div class="nav">
+					<div class="logo">
+                        <div class="logo_mini">
+                            <a href="{% url 'home' %}"><img class="logo_mini" src="{% static 'picture/images/logo.png' %}" alt=""/></a>
+                        </div>
+					</div>
+					<div class="top__main">
+						<ul>
+							<li>
+								<a href="{% url 'home' %}"><p class="nav__link">Главная страница</p> </a>
+								<a href="{% url 'about' %}"><p class="nav__link">О нас</p> </a>
+								<nav class="water__menu">
+									<ul>
+										<li><a ><p class="nav__link__c">Мастер-классы</p> </a>
+											<ul>
+												<li><a href="{% url 'little_mk' %}"><p class="nav__link__l">Для детей</p> </a></li>
+												<li><a href="{% url 'big_mk' %}"><p class="nav__link__r">Для взрослых</p> </a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<a href="{% url 'gallery_picture' ip_mk=0 %}"><p class="nav__link">Галерея</p> </a>
+								<a href="{% url 'price_list' %}"><p class="nav__link">Прайс-лист</p> </a>
+							</li>
+						</ul>
+					</div>
+                    <div class="psevdo__block"></div>
+				</div>
+				<div class="content">
+					{% block content %}
+					{% endblock %}
+				</div>
+			</div>
+			<div class="bot__nav">
+				<div class="list__bot__nav__link">
+					{% for bn1 in bot_nav1 %}
+					{% if bn1.name_list == 'Контакты' %}
+					<div class="line_contacts_links">
+						<div class="insta">
+							<a href="https://www.instagram.com/artmosfera_minsk/">1111</a>
+						</div>
+						<div class="tg">
+							<a href="https://t.me/artmosfera_minsk">222</a>
+						</div>
+						<div class="tg_bot">
+							<a href="https://t.me/artmosfera_bot">333</a>
+						</div>
+                		<div class="tel">
+							<div>
+								<a href="#####">444
+									<span id="tel_number">+375(25)706-65-03</span>
+								</a>
+							</div>
+
+
+						</div>
+					</div>
+<!--						<a href="{% url bn1.name_link %}"><p class="bot__nav__link" >{{bn1.name_list}}</p> </a>-->
+					{% else %}
+						<a href="{% url bn1.name_link %}"><p class="bot__nav__link" >{{bn1.name_list}}</p> </a>
+					{% endif %}
+					{% endfor %}
+				</div>
+				<div class="list__bot__nav__link">
+					{% for bn2 in bot_nav2 %}
+					{% if bn2.name_link == "form_writer" %}
+						<a href="{% url bn2.name_link ip_mk=0 ip_pict=0 %}"><p class="bot__nav__link" >{{bn2.name_list}}</p> </a>
+					{% else %}
+						<a href="{% url bn2.name_link %}"><p class="bot__nav__link" >{{bn2.name_list}}</p> </a>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<footer class="foot">
+			<span>&copy; 2021 Частичное или полное копирование информации с данного сайта для распространения на других ресурсах, в том числе и бумажных, строго запрещено.</span>
+		</footer>
+
+		<script type="text/javascript" src='{% static "picture/js/calc_height.js" %}'></script>
+
+	</body>
+</head>
+</html>

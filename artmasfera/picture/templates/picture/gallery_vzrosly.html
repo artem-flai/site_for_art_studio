@@ -1,0 +1,32 @@
+{% extends 'picture/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="name__list">{{ head }} </h1>
+<div class="content__mk">
+    <div class="content__mk__line">
+        {% for mk in mk_v %}
+        {% if mk.view_of_clients == 'adult' and mk.activation %}
+        <div class="block__mk">
+            <h3 class="mk__name">Свободная тема</h3>
+            <p class="mk__param">Время: {{ mk.time_mk }}</p>
+            <p class="mk__param">Дата: {{ mk.date_mk }}</p>
+            <p class="mk__param">Адрес: {{ mk.local }}</p>
+            <p class="mk__param">Стоимость: {{ mk.price }} руб.</p>
+            <a href="{% url 'gallery_picture' ip_mk=mk.pk %}"><h3 class="mk__entry">Выбор картины</h3></a>
+
+        </div>
+        <div class="block__foto__mk">
+            <img class="mk__foto" src='{{ mk.foto.url }}' >
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div class="btn">
+    <button class="slider-prev" style="width: 150px">Предыдущая запись</button>
+    <button class="slider-next" style="width: 150px">Следующая запись</button>
+    <script type="text/javascript" src={% static "picture/js/slider.js" %}></script>
+</div>
+
+{% endblock %}

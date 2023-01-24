@@ -1,0 +1,571 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-image: url(../images/sea.png);
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+	font-family: 'Play', sans-serif;
+	height: 100%;
+	width: 100%;
+	color: #474747;
+	min-width: 840px;
+	line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+/* Убираем стрелочки с поля ввода телефона*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+
+/* Container */
+.container {
+	display: block;
+    width: 100%;
+    }
+/* Intro */
+.intro {
+
+	    }
+/* Nav */
+.nav {
+	display: flex;
+    justify-content: space-around;
+    margin: auto;
+    font-family: 'Rampart One', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 2px;
+    line-height: 0.8;
+}
+.top__main {
+	width: 520px;
+    margin: 0;
+    border: 10px solid;
+    border-color: rgb(237 211 150/94%);
+    border-radius: 90px;
+    background-color: rgb(253 238 195/70%);
+}
+.top__main a{
+	text-decoration: none;
+}
+.top__main li{
+	list-style: none;
+}
+.top__main ul{
+	padding: 0;
+}
+.nav__link {
+	color: #121010;
+	transition: color .2s linear;
+	text-align: center;
+}
+.water__menu {
+	width: 200px;
+	margin: auto;
+}
+.water__menu p {
+	margin: 0;
+}
+.nav__link__c {
+	color: #121010;
+	transition: color .2s linear;
+	text-align: center;
+}
+.water__menu li ul{
+	position: absolute;
+	display: none;
+}
+.water__menu li ul p{
+	margin: 0;
+	height: 18px;
+	position: absolute;
+	font-size: 18px;
+}
+.nav__link__l {
+	width: 110px;
+	left: -102px;
+	top: -14px;
+	transition: color .2s linear;
+}
+.nav__link__r {
+	width: 160px;
+	left: 194px;
+	top: -15px;
+	transition: color .2s linear;
+}
+.nav__link__l:hover {
+	color: #38fcef;
+}
+.nav__link__r:hover {
+	color: #38fcef;
+}
+.water__menu li:hover > ul{
+	display: block;
+}
+.water__menu li ul p {
+	color: #24c7bc;
+}
+.nav__link:hover {
+	color: #24c7bc;
+}
+.psevdo__block {
+	width: 186px;
+}
+/* Logo */
+.logo {
+	height: 240px;
+	width: auto;
+}
+.logo_mini {
+	height: 160px;
+	width: auto;
+}
+/* Название страницы в середине */
+.name__list {
+	text-align: center;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+/* Content */
+.content {
+	min-height: 600px;
+	max-height: auto;
+/*
+	background-image: url("../images/tex_ture_1.png");
+	background-repeat: repeat;
+    background-size: auto;
+*/
+}
+
+.content__home {
+	font-family: 'Comfortaa', cursive;
+	font-size: 20px;
+	line-height: 1.2;
+	width: 840px;
+	word-spacing: 0.4em;
+	margin: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+
+}
+.content__home ul{
+    padding: 0;
+}
+.vid_mk {
+	margin-left: 120px;
+}
+.content__mk {
+	width: 600px;
+	margin: auto;
+	overflow: hidden;
+	border: 8px solid #e8bd79;
+}
+.content__mk__line {
+	height: 300px;
+	position: relative;
+	left: 0;
+	transition: all ease 1s;
+	display: flex;
+}
+.content__gallery {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    flex-basis: 640px;
+    max-width: 640px;
+    margin: auto;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    background-color: #00000020;
+    margin-bottom: 20px;
+}
+.block__foto__gallery img {
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+    padding: 0;
+}
+.block__foto__gallery a {
+    display: block;
+    width: auto;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #018279;
+    background-color: #ffffff73;
+
+}
+.block__foto__gallery a:hover{
+    color: #24c7bc;
+}
+.block__foto {
+    width: 300px;
+    height: 360px;
+}
+/* Прайс-лист */
+.price_view p:first-child{
+    display: inline;
+    padding: 0;
+    margin-right: 190px;
+}
+.price_view p:last-child{
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+.akrill {
+    text-align: center;
+}
+/* Информация о мастер-классе */
+.block__mk {
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	padding: 0;
+}
+.mk__name {
+	width: 300px;
+	font-size: 22px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.mk__param {
+	margin: 10px 10px;
+}
+/* Фото мастер-класса */
+.block__foto__mk {
+    width: 300px;
+    height: 300px;
+}
+.block__foto__mk img {
+    object-fit: contain;
+    width: 280px;
+    height: 280px;
+    padding: 0;
+    margin: 10px;
+}
+/* Кнопка Записаться */
+.block__mk a {
+	text-decoration: none;
+}
+.mk__entry {
+    width: 160px;
+	color: #188079;
+	transition: color, border-bottom .1s linear;
+	text-align: left;
+	margin: 0 10px;
+	border-bottom: none;
+}
+.mk__entry:hover {
+	color: #24c7bc;
+    border-bottom: 3px solid;
+}
+.mk__entryKids {
+    width: 100px;
+	color: #188079;
+	transition: color, border-bottom .1s linear;
+	text-align: left;
+	margin: 0 10px;
+	border-bottom: none;
+}
+.mk__entryKids:hover {
+	color: #24c7bc;
+    border-bottom: 3px solid;
+}
+/* Кнопка переключения записей */
+.btn {
+	margin: 10px auto;
+	width: 600px;
+	height: auto;
+
+}
+.slider-prev {
+	border-radius: 20px;
+	border: 2px solid #aa7d39;
+	color: #188079;
+	background-color: #ffeec3;
+	margin: 0;
+	padding: 10px 0;
+}
+.slider-prev:hover {
+	color: #24c7bc;
+}
+.slider-next {
+	border-radius: 20px;
+	border: 2px solid #aa7d39;
+	color: #188079;
+	background-color: #ffeec3;
+	margin: 0;
+	padding: 10px 0;
+	position: relative;
+	left: 300px;
+}
+.slider-next:hover {
+	color: #24c7bc;
+}
+/* Нижняя навигация */
+.bot__nav {
+	display: flex;
+    width: 810px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    border: 10px solid;
+    border-color: rgb(237 211 150/94%);
+    border-radius: 90px;
+    background-color: rgb(253 238 195/70%);
+    padding: 0 30px;
+}
+
+.list__bot__nav__link {
+	font-family: 'Rampart One', cursive;
+	font-size: 20px;
+	line-height: 1.8;
+	transition: color .2s linear;
+	padding: 0 15px;
+}
+.list__bot__nav__link a{
+	text-decoration: none;
+}
+.bot__nav__link {
+	color: #121010;
+}
+.bot__nav__link:hover {
+	color: #24c7bc;
+}
+.foot {
+	background-color: #eeeeee82;
+	color: #474747;
+}
+footer span{
+	margin-left: 10px;
+}
+/* Форма записи */
+.content__form {
+    font-family: 'Comfortaa', cursive;
+	font-size: 20px;
+	line-height: 1.2;
+	width: 640px;
+	height: 800px;
+	word-spacing: 0.4em;
+	margin: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+}
+.form_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#label_id_local {
+    grid-column: 1;
+    grid-row: 1;
+}
+#form_id_local {
+    grid-column: 3;
+    grid-row: 1;
+}
+#label_id_date_mk {
+    grid-column: 1;
+    grid-row: 2;
+}
+#form_id_date_mk {
+    grid-column: 3;
+    grid-row: 2;
+}
+#label_id_time_mk {
+    grid-column: 1;
+    grid-row: 3;
+}
+#form_id_time_mk {
+    grid-column: 3;
+    grid-row: 3;
+}
+#label_id_price {
+    grid-column: 1;
+    grid-row: 4;
+}
+#form_id_price {
+    grid-column: 3;
+    grid-row: 4;
+}
+#label_id_name_picture {
+    grid-column: 1;
+    grid-row: 5;
+}
+#form_id_name_picture {
+    grid-column: 3;
+    grid-row: 5;
+}
+#label_id_name_guest {
+    grid-column: 1;
+    grid-row: 6;
+}
+#form_id_name_guest {
+    grid-column: 3;
+    grid-row: 6;
+}
+#label_id_tel_guest {
+    grid-column: 1;
+    grid-row: 7;
+}
+#form_id_tel_guest {
+    grid-column: 3;
+    grid-row: 7;
+}
+#id_mobil_code {
+    height: 32px;
+    background-color: rgb(256 256 230/70%);
+    border: none;
+}
+#tel__style {
+    grid-column: 2;
+    grid-row: 7;
+    width: 110px;
+    text-align: end;
+    margin: 20px 0;
+}
+#label_id_email_guest {
+    grid-column: 1;
+    grid-row: 8;
+}
+#form_id_email_guest {
+    grid-column: 3;
+    grid-row: 8;
+}
+.captcha{
+    grid-column: 2;
+    grid-row: 9;
+    margin: 10px;
+}
+#id_captcha_1{
+    grid-column: 3;
+    grid-row: 9;
+    margin: 12px 0;
+}
+.label__f {
+    width: 360px;
+}
+.input__f {
+    width: auto;
+}
+form input {
+    background-color: rgb(256 256 230/70%);
+    border: none;
+    width: 200px;
+    height: 30px;
+    font-size: 17px;
+}
+form div ul{
+    margin: 0px;
+}
+.form-error {
+    color: red;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.form-error li{
+    list-style: none;
+    width: 600px;
+}
+
+.email__message {
+    margin: 120px;
+    font-size: 16px;
+}
+
+/* Прайс лист*/
+.content__price_list {
+    width: 420px;
+    margin: auto;
+}
+.content__price_list ul{
+	list-style: none;
+}
+.content__price_list ul li {
+    border: 6px solid #edd598;
+    margin: 10px;
+}
+.block_button {
+    text-align: center;
+}
+.btn__form {
+    width: 220px;
+    margin: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: #427d72;
+    background: #fdf6d6;
+    border: 6px solid #fdf6d6ad;
+    border-radius: 25px;
+    text-shadow: 3px 3px 3px #918f68;
+}
+.btn__form:hover {
+    background: #fdf6d657;
+}
+#also {
+    font-size: 16px;
+    margin: 0;
+}
+.redirect__st{
+    margin-top: 140px;
+}
+.redirect__st2{
+    height: 148px;
+    background-image: url(../images/sea_success2.png);
+}
+.partners_st a{
+    font-size: 24px;
+    text-decoration: none;
+    color: #295e5e;
+    text-shadow: 3px 3px 3px #599c88;
+}
+
+.line_contacts_links {
+    display: inline-flex;
+}
+.line_contacts_links div{
+    width: 40px;
+    height: 40px;
+    margin-left: 7px;
+}
+.line_contacts_links a{
+    color: #ffffff00;
+    display: inline-flex;
+}
+.insta{
+    background-image: url(../images/insta_logo.png);
+}
+.tg{
+    background-image: url(../images/tg_logo.png);
+}
+.tg_bot{
+    background-image: url(../images/tg_bot_logo.png);
+}
+.tel{
+    background-image: url(../images/phone_logo.png);
+}
+.line_contacts_links a:hover > span{
+    color: #188079;
+}
+#tel_number {
+    width: 200px;
+    margin-top: 0px;
+
+}

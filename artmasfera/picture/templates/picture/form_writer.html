@@ -1,0 +1,31 @@
+{% extends 'picture/base.html' %}
+
+{% block content %}
+<div class="preview">
+    <h1 class="name__list">{{ title }}</h1>
+    <div class="content__form">
+        <form method="post">
+            <div class="form_grid">
+                {% csrf_token %}
+                {% for f in form %}
+                {% if f.label == "Mobil_code" %}
+                <div id="tel__style">{{ f }}</div>
+                {% elif f.label == "Captcha" %}
+                {{ f }}
+                <div class="form-error">{{ f.errors }}</div>
+                {% else %}
+                <div class="label__f" id="label_{{ f.id_for_label }}"><p>{{f.label}}</p></div>
+                <div class="input__f" id="form_{{ f.id_for_label }}"><p><label class="form-label"></label>{{ f }}</p></div>
+                <div class="form-error">{{ f.errors }}</div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="block_button">
+                <button type="submit" class="btn__form" >"Записаться на мастер-класс"</button><br>
+            </div>
+        </form>
+        <p id="also">*При вводе поля "e-mail" мы пришлем Вам фото с Мастер-класса</p>
+    </div>
+
+</div>
+{% endblock %}
